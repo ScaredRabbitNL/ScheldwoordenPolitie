@@ -6,7 +6,6 @@ leds = LEDBoard(18,24)
 
 def __init__(x):
     for y in range(5 * x):
-    
         for led in leds:
             led.on()
             time.sleep(0.1)
