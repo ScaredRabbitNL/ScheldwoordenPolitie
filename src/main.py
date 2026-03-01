@@ -1,6 +1,12 @@
-import file
-import siren
-import stream
+import os
+from dotenv import load_dotenv as ld
 
-siren.siren(5)
+ld()
+key = os.getenv("AAI_API_KEY")
+
+#siren.siren(5)
+#live_input.main()
+
+
+#stt.init()
 
