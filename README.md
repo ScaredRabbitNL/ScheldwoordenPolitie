@@ -2,7 +2,10 @@
 
 Dependencies:
 
-- RealtimeSTT
 - gpiozero
+- lgpio
+- pigpio
 - assemblyai
+- mistralai
+- dotenv (python-dotenv)
 

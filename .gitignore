@@ -6,3 +6,7 @@ pyvenv.cfg
 venv/
 *.wav
 .env
+outputs/
+logs/
+src/__pycache__/
+*.log
