@@ -1,6 +1,5 @@
 import os
 
-
 def createDirectory(dir_name):
     try:
         os.mkdir(dir_name)
