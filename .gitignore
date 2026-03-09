@@ -10,3 +10,5 @@ outputs/
 logs/
 src/__pycache__/
 *.log
+.mistral_agent_id
+.lgd-nfy0

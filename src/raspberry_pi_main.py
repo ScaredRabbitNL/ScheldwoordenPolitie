@@ -12,7 +12,7 @@ load_dotenv()
 assemblyai_api_key = os.getenv("ASSEMBLYAI_API_KEY")
 mistralai_api_key = os.getenv("MISTRALAI_API_KEY")
 
-os.makedirs("logs", exist_ok=True)
+os.makedirs("logs/api_requests/", exist_ok=True)
 os.makedirs("./assets/audio", exist_ok=True)
 audio_file = "./assets/audio/voice.wav"
 
@@ -74,9 +74,9 @@ def transcribe():
 def save_log(formatted):
     date_str = datetime.datetime.now().date()
     number = 1
-    while os.path.exists(f"logs/log_{date_str}+{number}.txt"):
+    while os.path.exists(f"logs/api_requests/api_request_log_{date_str}+{number}.json"):
         number += 1
-    file_path = f"logs/log_{date_str}+{number}.txt"
+    file_path = f"logs/api_requests/api_request_log_{date_str}+{number}.json"
     with open(file_path, "w") as f:
         f.write(formatted)
     print(f"Log saved: {file_path}") 
@@ -94,25 +94,26 @@ while True:
             {
                 "role": "user",
                 "content": (
-                    f"Beoordeel de volgende tekst (aangegeven met Tekst:), is het heel onvriendlijk (10) "
-                    f"of heel vriendelijk (1) of ergens er tussen in (2-9). Geef alleen het nummer. "
+                    f"Beoordeel de volgende tekst (aangegeven met Tekst:), is het heel onvriendlijk (1) "
+                    f"of heel vriendelijk (10) of ergens er tussen in (2-9). Geef alleen het nummer. "
                     f"Tekst: {assemblyai_transcript.text}"
                 ),
             }
         ]
 
         response = stt.GET(agent=mistral_agent, client=mistral_client, inputs=mistral_conversation_inputs)
-        ai_text_rating = response.outputs[0].content
+        ai_text_rating = int(response.outputs[0].content)
         print(f"De beoordeling van deze audio is: {ai_text_rating}")
-        
-        if ai_text_rating >= 7:
+
+        if ai_text_rating <= 3:
             siren.siren(3 * ai_text_rating)
+   
 
         response_dict = response.model_dump() if hasattr(response, 'model_dump') else response.__dict__
         save_log(json.dumps(response_dict, indent=4, default=str))
 
     except KeyboardInterrupt:
-        print("\nGestop door gebruiker.")
+        print("\nGestopt door gebruiker.")
         break
     except Exception as e:
         print(f"Error gedurende lus iteratie: {e}")

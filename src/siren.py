@@ -6,9 +6,9 @@ buzzer = Buzzer(22)
 
 def siren(x):
     for y in range(x):
-        #buzzer.on()
-        #time.sleep(1)
-        #buzzer.off()
+        buzzer.on()
+        time.sleep(0.05)
+        buzzer.off()
         for led in leds:
             led.on()
             time.sleep(0.1)
