@@ -53,7 +53,7 @@ def record():
     subprocess.run(
         [
             "arecord",
-            "--device=hw:3,0",
+            "--device=plughw:3,0",
             "--format", "S16_LE",
             "--rate", "44100",
             "-V", "mono",
