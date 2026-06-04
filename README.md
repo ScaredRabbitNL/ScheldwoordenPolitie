@@ -23,7 +23,7 @@ Linux / Unix-gebaseerde systemen (inclusief Raspberry Pi OS)
 source ./$NAME/bin/activate
 ```
 
-Dit project is afhankelijk van de volgende bibliotheken: gpiozerolgpio, pigpio, assemblyai, mistralai en dotenv (python-dotenv). Let op: lgpio en pigpio zijn afhankelijkheden van gpiozero die soms niet kunnen worden gedownload. Voor de zekerheid hebben we het installatiecommando in tweeën gesplitst. Voer het volgende uit (in een geactiveerde venv): 
+Dit project is afhankelijk van de volgende bibliotheken: gpiozero,lgpio, pigpio, assemblyai, mistralai en dotenv (python-dotenv). Let op: lgpio en pigpio zijn afhankelijkheden van gpiozero die soms niet kunnen worden gedownload. Voor de zekerheid hebben we het installatiecommando in tweeën gesplitst. Voer het volgende uit (in een geactiveerde venv): 
 ```bash
 pip install gpiozero lgpio pigpio
 pip install assemblyai mistralai dotenv
