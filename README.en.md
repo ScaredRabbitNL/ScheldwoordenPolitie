@@ -27,7 +27,7 @@ This project depends on the following libraries: gpiozero, lgpio, pigpio, assemb
 pip install gpiozero lgpio pigpio
 pip install assemblyai mistralai dotenv
 ```
-This project is also dependent on the alsa-utils package for linux/unix based system. Install it by using the following commands:
+This project is also dependent on the alsa-utils package for linux/unix based systems. Install it by using the following commands:
 ```bash
 sudo apt update && sudo apt upgrade
 sudo apt install alsa-utils
