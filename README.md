@@ -11,12 +11,7 @@ If you dont speak dutch, please look at the [English](./README.en.md) version.
 
 Begin door deze repository te klonen en (in de terminal) naar de map te gaan die de gekloonde repository en de map src bevat. Gebruik vervolgens het volgende commando om een virtuele omgeving aan te maken: ``python -m venv $NAME`` 
 $NAME is de naam die je aan de virtuele omgeving wilt geven.
-Activeer vervolgens de virtuele omgeving door het volgende commando uit te voeren (afhankelijk van je besturingssysteem):
-
-Windows
-```bash
-.\$NAME\Scripts\activate
-```
+Activeer vervolgens de virtuele omgeving door het volgende commando uit te voeren. Helaas is dit project erg afhankelijk van Unix-gebaseerde systemen.
 
 Linux / Unix-gebaseerde systemen (inclusief Raspberry Pi OS)
 ```bash

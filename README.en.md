@@ -10,12 +10,7 @@ This is a project created by me (and my classmates) for the Raspberry Pi Competi
 
 Get started by cloning this repository and (in the terminal) moving into the directory that contains the cloned repository and the src folder. Then use the following command to create a virtual environment: ``python -m venv $NAME`` 
 $NAME is whatever you want the name of the virtual environment's name to be.
-Then activate said virtual environment by running the following command (dependent on your operating system):
-
-Windows
-```bash
-.\$NAME\Scripts\activate
-```
+Then activate said virtual environment by running the following commands. Unfortunately, this project is incredibly dependent on unix based systems.
 
 Linux / Unix based systems (Includes Raspberry PI OS)
 ```bash
@@ -23,6 +18,7 @@ source ./$NAME/bin/activate
 ```
 
 This project depends on the following libraries: gpiozero, lgpio, pigpio, assemblyai, mistralai and dotenv (python-dotenv). Note that lgpio and pigpio are dependencies of gpiozero that sometimes fail to download. To be absolutely sure, we've seperated the install command into two. Please run (in activated venv): 
+
 ```bash
 pip install gpiozero lgpio pigpio
 pip install assemblyai mistralai dotenv
