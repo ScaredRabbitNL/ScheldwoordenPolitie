@@ -5,7 +5,7 @@ import speech_to_text as stt
 import siren
 import datetime
 import json
-from mistralai import Mistral
+from mistralai.client import Mistral
 from dotenv import load_dotenv
 
 load_dotenv()

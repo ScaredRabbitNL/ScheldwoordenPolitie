@@ -18,7 +18,7 @@ Windows
 .\$NAME\Scripts\activate
 ```
 
-Waarschuwing: Windows kan alleen het ontwikkelen van het programma aan, het kan het niet uitvoeren. Het gebruik van Unix-gebaseerde systemen heeft de voorkeur en wordt ook aangeraden.
+Waarschuwing: Windows kan alleen het ontwikkelen van het programma aan, het kan het niet uitvoeren. Het gebruik van Unix-gebaseerde systemen of Windows Subsystem for Linux heeft de voorkeur en wordt ook aangeraden.
 
 Linux / Unix-gebaseerde systemen (inclusief Raspberry Pi OS)
 ```bash

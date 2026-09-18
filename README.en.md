@@ -16,7 +16,7 @@ Windows
 ```bash
 .\$NAME\Scripts\activate
 ```
-Note that windows can only handle development of the program, it can't execute it. Using a Unix-based system is preferred and recommended.
+Note that windows can only handle development of the program, it can't execute it. Using a Unix-based system or Windows Subsystem for Linux is preferred and recommended.
 
 Linux / Unix based systems (Includes Raspberry PI OS)
 ```bash
